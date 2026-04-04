@@ -28,14 +28,16 @@ public class GrabObject : MonoBehaviour
 
     public void Grab()
     {
-        
+        if (player != null && soundGrab != null)
+        {
+            player.PlayOneShot(soundGrab);
+        }
         if (grabManager.heldItem != null)
         {
             grabManager.heldItem.GetComponent<GrabObject>().Drop();
         }
         grabManager.heldItem = transform.gameObject;
-        boxCollider.enabled = false;
-        player.PlayOneShot(soundGrab);
+        boxCollider.enabled = false;  
     }
 
     public void Drop()
