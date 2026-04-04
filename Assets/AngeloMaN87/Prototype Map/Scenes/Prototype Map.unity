@@ -994,7 +994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 080cf27e7f3c92641b9e54c94b4e79ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GrabObject
-  soundGrab: {fileID: 0}
+  soundGrab: {fileID: 8300000, guid: 93b4f0eda1fca4b4ca6e1d13434d476e, type: 3}
   soundPlace: {fileID: 0}
   type: Objeto
   spawner: {fileID: 946330111}
@@ -1064,7 +1064,7 @@ Transform:
   m_GameObject: {fileID: 756618131}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 41.15, y: 6.45, z: -78.56}
+  m_LocalPosition: {x: 40.96, y: 7.2, z: -78.56}
   m_LocalScale: {x: 0.78097457, y: 0.78097457, z: 0.78097457}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1519,7 +1519,7 @@ MonoBehaviour:
     encima del cubo, apunta al cubo y cuando aparesca un icono de carga, mantenlo
 
     ahi
-    hasta que termine, y estara encima ahora
+    hasta que termine o haz un clock, y estara encima ahora
 
     el cilindro.'
   m_isRightToLeft: 0
