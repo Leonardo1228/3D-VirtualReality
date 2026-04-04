@@ -29186,10 +29186,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 080cf27e7f3c92641b9e54c94b4e79ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GrabObject
-  soundGrab: {fileID: 0}
-  soundPlace: {fileID: 0}
+  soundGrab: {fileID: 8300000, guid: 93b4f0eda1fca4b4ca6e1d13434d476e, type: 3}
+  soundPlace: {fileID: 8300000, guid: dd5f751e4dbaee9449229926956ca856, type: 3}
   type: Objeto
-  spawner: {fileID: 0}
+  spawner: {fileID: 429838983}
 --- !u!65 &1189158544
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29692,7 +29692,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlateBehaviour
   holder: {fileID: 1753547873}
-  heldObject: {fileID: 1196956713}
+  heldObjects:
+  - {fileID: 1189158542}
+  - {fileID: 795119720}
+  - {fileID: 698275781}
+  - {fileID: 0}
 --- !u!1001 &1202620143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42049,7 +42053,7 @@ Transform:
   m_GameObject: {fileID: 1648932674}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.034, z: 0}
+  m_LocalPosition: {x: -0.18, y: 0.212, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -42186,11 +42190,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4695452481877872, guid: b0891c99897c85a43999074d8ede8a59, type: 3}
   m_PrefabInstance: {fileID: 1652791609}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1654500002 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1008229954200194, guid: 91fa7b69c0bd1e54f87e310cdde7e3af, type: 3}
-  m_PrefabInstance: {fileID: 2071608205}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1658638240
 GameObject:
@@ -44826,7 +44825,7 @@ Transform:
   m_GameObject: {fileID: 1753547873}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 4.563399e-31, z: 1.043984e-23, w: 1}
-  m_LocalPosition: {x: -1.3, y: -1.67, z: 0.65}
+  m_LocalPosition: {x: 0.76, y: 0.177, z: 2.86}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -56406,8 +56405,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.52, y: 0.21, z: 3.92}
-  m_Center: {x: 0, y: 0.02, z: 0}
+  m_Size: {x: 0.52, y: 0.13, z: 3.92}
+  m_Center: {x: 0, y: 0.08, z: 0}
 --- !u!114 &2071608208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56421,7 +56420,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlateBehaviour
   holder: {fileID: 1648932674}
-  heldObject: {fileID: 1654500002}
+  heldObjects:
+  - {fileID: 698275781}
+  - {fileID: 795119720}
+  - {fileID: 1189158542}
+  - {fileID: 0}
 --- !u!1001 &2078596476
 PrefabInstance:
   m_ObjectHideFlags: 0
