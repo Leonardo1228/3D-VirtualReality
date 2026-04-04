@@ -1,13 +1,14 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlateBehaviour : MonoBehaviour
 {
     GrabManager grabManager;
+
     [SerializeField] GameObject holder;
-    
-    public GameObject heldObject;
+
+    [SerializeField] List<GameObject> heldObjects = new List<GameObject>();
 
     void Start()
     {
@@ -16,30 +17,42 @@ public class PlateBehaviour : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (heldObject != null)
+        foreach (var obj in heldObjects)
         {
-            heldObject.transform.Rotate(Vector3.up * (10 * Time.deltaTime));
+            if (obj != null)
+            {
+                obj.transform.Rotate(Vector3.up * (10 * Time.deltaTime));
+            }
         }
     }
 
     public void OnPointerClickXR()
     {
+        // 👉 Agregar objeto al plato
         if (grabManager.heldItem != null)
         {
-            if (heldObject != null)
-            {
-                heldObject.GetComponent<GrabObject>().Respawn();
-            }
-            heldObject = grabManager.heldItem;
-            grabManager.heldItem.GetComponent<GrabObject>().Place(holder.transform.position);
+            GameObject newObject = grabManager.heldItem;
+
+            heldObjects.Add(newObject);
+
+            newObject.GetComponent<GrabObject>().Place(GetPositionForIndex(heldObjects.Count - 1));
         }
         else
         {
-            if (heldObject != null)
+            // 👉 Sacar último objeto
+            if (heldObjects.Count > 0)
             {
-                heldObject.GetComponent<GrabObject>().Grab();
-                heldObject = null;
+                GameObject lastObject = heldObjects[heldObjects.Count - 1];
+
+                lastObject.GetComponent<GrabObject>().Grab();
+                heldObjects.RemoveAt(heldObjects.Count - 1);
             }
         }
+    }
+
+    Vector3 GetPositionForIndex(int index)
+    {
+        float spacing = 0.2f;
+        return holder.transform.position + new Vector3(index * spacing, 0, 0);
     }
 }
