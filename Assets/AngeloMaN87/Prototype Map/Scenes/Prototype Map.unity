@@ -414,9 +414,11 @@ GameObject:
   - component: {fileID: 323829658}
   - component: {fileID: 323829657}
   - component: {fileID: 323829656}
-  m_Layer: 5
+  - component: {fileID: 323829661}
+  - component: {fileID: 323829660}
+  m_Layer: 0
   m_Name: Button
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -547,6 +549,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 323829654}
   m_CullTransparentMesh: 1
+--- !u!65 &323829660
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323829654}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 405, y: 219.29, z: 600}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &323829661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323829654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 764536b5e1f7e1f4c898051648759660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UiElementXR
+  OnXRPointerEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  OnXRPointerExit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &423140471
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,6 +730,7 @@ GameObject:
   - component: {fileID: 573105971}
   - component: {fileID: 573105974}
   - component: {fileID: 573105975}
+  - component: {fileID: 573105976}
   m_Layer: 0
   m_Name: Button
   m_TagString: Interactable
@@ -841,8 +883,26 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 110.3, y: 35.09, z: 15.17}
+  m_Size: {x: 110.3, y: 60.64, z: 53.6}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &573105976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573105969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 764536b5e1f7e1f4c898051648759660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UiElementXR
+  OnXRPointerEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  OnXRPointerExit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &579031080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1719,7 +1779,7 @@ GameObject:
   - component: {fileID: 1148182439}
   - component: {fileID: 1148182441}
   - component: {fileID: 1148182440}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
