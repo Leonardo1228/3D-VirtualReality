@@ -985,9 +985,10 @@ GameObject:
   - component: {fileID: 41435271}
   - component: {fileID: 41435270}
   - component: {fileID: 41435273}
-  m_Layer: 5
+  - component: {fileID: 41435274}
+  m_Layer: 0
   m_Name: Button
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1136,6 +1137,27 @@ MonoBehaviour:
   OnXRPointerExit:
     m_PersistentCalls:
       m_Calls: []
+--- !u!65 &41435274
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41435268}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 170.56, y: 69.6, z: 46.53}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &42593153
 GameObject:
   m_ObjectHideFlags: 0
@@ -4666,11 +4688,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4884506299486790, guid: fa4da68845544c044811ba92bfd650a9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.0109999
+      value: -0.41
       objectReference: {fileID: 0}
     - target: {fileID: 4884506299486790, guid: fa4da68845544c044811ba92bfd650a9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.32600003
+      value: -1.32
       objectReference: {fileID: 0}
     - target: {fileID: 4884506299486790, guid: fa4da68845544c044811ba92bfd650a9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -24605,9 +24627,11 @@ GameObject:
   - component: {fileID: 964151013}
   - component: {fileID: 964151012}
   - component: {fileID: 964151011}
-  m_Layer: 5
+  - component: {fileID: 964151016}
+  - component: {fileID: 964151015}
+  m_Layer: 0
   m_Name: Button
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24738,6 +24762,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 964151009}
   m_CullTransparentMesh: 1
+--- !u!65 &964151015
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964151009}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 84.06, y: 44.71, z: 16.18}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &964151016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964151009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 764536b5e1f7e1f4c898051648759660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UiElementXR
+  OnXRPointerEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  OnXRPointerExit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &970840611
 GameObject:
   m_ObjectHideFlags: 0
@@ -27394,15 +27457,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4339068602107968, guid: e2b3dbdc69ffbc54a88f7b8ae30144bb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.9039999
+      value: -0.68
       objectReference: {fileID: 0}
     - target: {fileID: 4339068602107968, guid: e2b3dbdc69ffbc54a88f7b8ae30144bb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.31900007
+      value: -1.25
       objectReference: {fileID: 0}
     - target: {fileID: 4339068602107968, guid: e2b3dbdc69ffbc54a88f7b8ae30144bb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.614
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 4339068602107968, guid: e2b3dbdc69ffbc54a88f7b8ae30144bb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -29316,7 +29379,7 @@ MonoBehaviour:
   - {fileID: 1884103362}
   - {fileID: 632226029}
   - {fileID: 1490795756}
-  - {fileID: 0}
+  - {fileID: 1077999607}
 --- !u!65 &1171731835
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30722,7 +30785,7 @@ MonoBehaviour:
   - {fileID: 1884103362}
   - {fileID: 632226029}
   - {fileID: 1490795756}
-  - {fileID: 0}
+  - {fileID: 1077999607}
 --- !u!1001 &1202620143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32901,7 +32964,7 @@ GameObject:
   - component: {fileID: 1306881567}
   - component: {fileID: 1306881569}
   - component: {fileID: 1306881568}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47537,9 +47600,10 @@ GameObject:
   - component: {fileID: 1807214514}
   - component: {fileID: 1807214513}
   - component: {fileID: 1807214512}
+  - component: {fileID: 1807214516}
   m_Layer: 5
   m_Name: Button (1)
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47688,6 +47752,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1807214510}
   m_CullTransparentMesh: 1
+--- !u!65 &1807214516
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807214510}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 179.89, y: 77.53, z: 22.33}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1811499957
 GameObject:
   m_ObjectHideFlags: 0
@@ -51625,7 +51710,7 @@ GameObject:
   - component: {fileID: 1899238496}
   - component: {fileID: 1899238498}
   - component: {fileID: 1899238497}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -58257,7 +58342,7 @@ MonoBehaviour:
   - {fileID: 1884103362}
   - {fileID: 632226029}
   - {fileID: 1490795756}
-  - {fileID: 0}
+  - {fileID: 1077999607}
 --- !u!1001 &2078596476
 PrefabInstance:
   m_ObjectHideFlags: 0
